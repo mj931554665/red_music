@@ -63,6 +63,7 @@
 </template>
 
 <script>
+import {getBannerImg} from './request/bannerImg';
 export default {
   data() {
     return {
@@ -74,7 +75,18 @@ export default {
     handleSelect(key, keyPath) {
       console.log(key, keyPath);
     },
+    async test(){
+      // 获取 banner 图数据
+      const { data: res } = await getBannerImg();
+        if (res.code !== 200) {
+          return this.$message.error("获取 banner 图失败");
+        }
+        console.log(res)
+      }
   },
+  created(){
+    this.test();
+  }
 };
 </script>
 
