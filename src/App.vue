@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <div class="line"></div>
+    <!-- <div class="line"></div>
     <el-menu
       :default-active="activeIndex2"
       class="el-menu-demo my-top"
@@ -58,23 +58,30 @@
           下载客户端
         </a>
       </el-menu-item>
-    </el-menu>
+    </el-menu> -->
+    <RanKingList></RanKingList>
   </div>
 </template>
 
 <script>
+import RanKingList from "./views/RankingList"
+
 export default {
-  data() {
-    return {
-      activeIndex: "1",
-      activeIndex2: "1",
-    };
-  },
-  methods: {
-    handleSelect(key, keyPath) {
-      console.log(key, keyPath);
-    },
-  },
+  name: "APP",
+  components: {
+    RanKingList: RanKingList
+  }
+  // data() {
+  //   return {
+  //     activeIndex: "1",
+  //     activeIndex2: "1",
+  //   };
+  // },
+  // methods: {
+  //   handleSelect(key, keyPath) {
+  //     console.log(key, keyPath);
+  //   },
+  // },
 };
 </script>
 
