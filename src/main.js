@@ -8,6 +8,7 @@ import 'element-ui/lib/theme-chalk/index.css';
 Vue.use(ElementUI);
 
 import "@/assets/style/restcss.css";
+import '@/assets/style/public.less'
 
 Vue.config.productionTip = false
 

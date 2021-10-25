@@ -1,6 +1,7 @@
 <template>
   <div id="app">
     <NavBar />
+    <div style="height:10000px"></div>
   </div>
 </template>
 
