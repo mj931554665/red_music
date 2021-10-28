@@ -5,19 +5,18 @@
 </template>
 
 <script>
-import Singer from './views/Singer.vue';
-
+import Singer from './views/Singer'
 export default {
+  name: "app",
   components: {
     Singer,
   },
   data() {
-    return {
-    };
+    return {};
   },
-  methods: {
-  },
-};
+  methods: {},
+  computed: {},
+}
 </script>
 
 <style lang="less" scoped>
