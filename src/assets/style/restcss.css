@@ -1,16 +1,84 @@
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
 	margin: 0;
 	padding: 0;
 	border: 0;
@@ -18,27 +86,316 @@ time, mark, audio, video {
 	font: inherit;
 	vertical-align: baseline;
 }
+
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section {
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
 	display: block;
 }
+
 body {
 	line-height: 1;
 }
-ol, ul {
+
+ol,
+ul {
 	list-style: none;
 }
-blockquote, q {
+
+blockquote,
+q {
 	quotes: none;
 }
-blockquote:before, blockquote:after,
-q:before, q:after {
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
 	content: '';
 	content: none;
 }
+
 table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
-body,html,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,dd,header,menu,section,p,input,td,th,ins{padding:0;margin:0;}body,textarea,select,input,button{font-size:12px; color:#333; font-family:Arial, Helvetica, sans-serif; -webkit-text-size-adjust:none;}section,header,main,article,aside,ins,nav{display:block;}html,body{width:100%; height:100%; border:0; word-wrap:break-word; word-break:break-word;}h1,h2,h3,h4,h5,h6{font-size:100%;}em,i{font-style:normal;text-align:left; font-size:inherit;}html,body,img,iframe{border:0;}textarea{resize:none; overflow:auto;}input:focus,textarea:focus,span:focus,a:focus,button:focus{outline:none;} li,s{list-style:none;}img, .txt{border:0;}mark{background:none;}[hidefocus]{outline:none;}a{text-decoration:none;color:#333;}a:hover{text-decoration:underline;color:#333;}a,a *, .f-hand, .f-hand *{cursor:pointer;}table{border-collapse:collapse;border-spacing:0;table-layout:fixed;}button{border:none;outline:none;cursor:pointer;padding:0;margin:0;}.f-cb:after{clear:both;content:'.';display:block;height:0;visibility:hidden;}.f-cb{*zoom:1;}
+
+body,
+html,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ul,
+ol,
+li,
+dl,
+dt,
+dd,
+header,
+menu,
+section,
+p,
+input,
+td,
+th,
+ins {
+	padding: 0;
+	margin: 0;
+}
+
+body,
+textarea,
+select,
+input,
+button {
+	font-size: 12px;
+	color: #333;
+	font-family: Arial, Helvetica, sans-serif;
+	-webkit-text-size-adjust: none;
+}
+
+section,
+header,
+main,
+article,
+aside,
+ins,
+nav {
+	display: block;
+}
+
+html,
+body {
+	width: 100%;
+	height: 100%;
+	border: 0;
+	word-wrap: break-word;
+	word-break: break-word;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-size: 100%;
+}
+
+em,
+i {
+	font-style: normal;
+	text-align: left;
+	font-size: inherit;
+}
+
+html,
+body,
+img,
+iframe {
+	border: 0;
+}
+
+textarea {
+	resize: none;
+	overflow: auto;
+}
+
+input:focus,
+textarea:focus,
+span:focus,
+a:focus,
+button:focus {
+	outline: none;
+}
+
+li,
+s {
+	list-style: none;
+}
+
+img,
+.txt {
+	border: 0;
+}
+
+mark {
+	background: none;
+}
+
+[hidefocus] {
+	outline: none;
+}
+
+a {
+	text-decoration: none;
+	color: #333;
+}
+
+a:hover {
+	text-decoration: underline;
+	color: #333;
+}
+
+html, body {
+	width: 100%;
+	height: 100%;
+	border: 0;
+	word-wrap: break-word;
+	word-break: break-word;
+}
+
+a,
+a *,
+.f-hand,
+.f-hand * {
+	cursor: pointer;
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+	table-layout: fixed;
+}
+
+button {
+	border: none;
+	outline: none;
+	cursor: pointer;
+	padding: 0;
+	margin: 0;
+}
+
+.f-cb:after {
+	clear: both;
+	content: '.';
+	display: block;
+	height: 0;
+	visibility: hidden;
+}
+
+.f-cb {
+	*zoom: 1;
+}
+
+
+.s-fc3,
+a.s-fc3:hover {
+  color: #666;
+}
+.u-icn-26,
+.u-icn-27,
+.u-icn-28,
+.u-icn-29 {
+  width: 14px;
+  height: 15px;
+  background-position: -35px -300px;
+}
+.s-fc7,
+a.s-fc7:hover {
+  color: #0c73c2;
+}
+.f-thide {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  word-wrap: normal;
+}
+a:hover {
+  text-decoration: none;
+}
+.f-cb:after {
+  clear: both;
+  content: ".";
+  display: block;
+  height: 0;
+  visibility: hidden;
+}
+.f-thide {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  word-wrap: normal;
+}
+.f-hide,
+.js-hide {
+  display: none !important;
+}
+.m-tlist .m-topmsg {
+  top: 7px;
+  left: 110px;
+}
+.m-topmsg {
+  display: inline-block;
+  min-width: 17px;
+  height: 17px;
+  padding: 0 4px;
+  box-sizing: border-box;
+  background: #c20c0c;
+  border-radius: 18px;
+  border: 1px solid #242424;
+  line-height: 16px;
+  font-size: 12px;
+  white-space: nowrap;
+  color: #fff;
+  text-align: center;
+}
+.f-cb:after {
+  clear: both;
+  content: ".";
+  display: block;
+  height: 0;
+  visibility: hidden;
+}
+.f-pr {
+  position: relative;
+  zoom: 1;
+}
+.el-carousel__indicators{
+	left: 42%;
+}
+.el-carousel__arrow--left{
+	left: 200px;
+}
+.el-carousel__arrow--right{
+	right: 200px;
+}
+#album-roller .el-carousel{
+	padding: 0 16px;
+}
+#album-roller .el-carousel__indicators{
+  display: none;
+}
+/* #album-roller .el-carousel--horizontal{
+	overflow: inherit;
+} */
+#album-roller .el-carousel__arrow--left {
+	left: -16px;
+	top: 45%;
+}
+#album-roller .el-carousel__arrow--right{
+	right: -18px;
+	top: 45%;
+}
+#album-roller .el-carousel__arrow {
+	width: 24px;
+	height: 198px;
+	color: #898989;
+	background-color: #f5f5f5;
+	border-radius: 0;
+}
+#album-roller .el-carousel__arrow:hover{
+	color: #656565;
+}

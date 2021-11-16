@@ -4,9 +4,16 @@ export default {
         return axios.get('/banner', { params: { type: 0} })
     },
     getSingerList(params) {
+        console.log(params);
         return axios.get('/artist/list', { params } )
     },
-    getSearchAssociation(params) {
-        return axios.get('/search/suggest?keywords= 海阔天空', { params } )
-    }
+    getTopPicks(params) {
+        return axios.get('/personalized', { params } )
+    },
+    getNewAlbum(){
+        return axios.get('/album/newest')
+    },
+    getSongList(params){
+        return axios.get('/playlist/detail' , { params })
+    },
 }

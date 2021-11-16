@@ -71,13 +71,21 @@
           </li>
         </ul>
         <div class="m-tophead f-pr j-tflag">
-          <div class="head f-fl f-pr">
+          <a
+            v-if="!islogin"
+            hidefocus="true"
+            href="#"
+            class="link s-fc3"
+            data-action="login"
+            >登录</a
+          >
+          <div v-else class="head f-fl f-pr">
             <img src="../assets/images/头像.jpg" alt="" />
             <a to="#" class="mask"></a>
             <i class="m-topmsg f-pa f-hide j-uflag"></i>
           </div>
           <a to="#" class="name f-thide f-fl f-tdn f-hide">俊九岁哟</a>
-          <div class="m-tlist m-tlist-lged j-uflag">
+          <div  v-show="islogin" class="m-tlist m-tlist-lged j-uflag">
             <ul class="f-cb lb mg">
               <li>
                 <a to="#" class="item-1">
@@ -249,6 +257,8 @@ export default {
 
       activeIndex: "1",
       activeIndex2: "1",
+
+      islogin: false,
     };
   },
   methods: {
@@ -545,6 +555,13 @@ a:hover {
     .m-topmsg {
       top: -5px;
       left: 20px;
+    }
+    .link,
+    .link:hover {
+      display: block;
+      width: 28px;
+      margin-top: 10px;
+      color: #787878;
     }
     .m-tlist {
       display: none;
