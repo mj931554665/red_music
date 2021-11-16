@@ -1,15 +1,15 @@
 <template>
   <div id="app">
-    <Singer />
+    <Song />
   </div>
 </template>
 
 <script>
-import Singer from './views/Singer'
+import Song from './views/Song'
 export default {
   name: "app",
   components: {
-    Singer,
+    Song,
   },
   data() {
     return {};
