@@ -23,6 +23,7 @@
                 <!-- <el-menu-item index="5">
                   <i class="el-icon-menu"></i>
                   <span slot="title">飙升榜</span>
+                  
                 </el-menu-item>
                 <el-menu-item index="6">
                   <i class="el-icon-menu"></i>
