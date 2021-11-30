@@ -328,11 +328,11 @@
                         <span class="no" :class="i < 3 ? 'no-top' : ''">{{
                           ++i
                         }}</span>
-                        <a
-                          :href="'/song?id=' + item.id"
+                        <router-link
+                          :to="'/song?id=' + item.id"
                           class="nm s-fc0 f-thide"
                           :title="item.name"
-                          >{{ item.name }}</a
+                          >{{ item.name }}</router-link
                         >
                         <div class="oper">
                           <a href="#" class="s-bg s-bg-11" title="播放"></a>
@@ -403,11 +403,11 @@
                         <span class="no" :class="i < 3 ? 'no-top' : ''">{{
                           ++i
                         }}</span>
-                        <a
-                          :href="'/song?id=' + item.id"
+                        <router-link
+                          :to="'/song?id=' + item.id"
                           class="nm s-fc0 f-thide"
                           :title="item.name"
-                          >{{ item.name }}</a
+                          >{{ item.name }}</router-link
                         >
                         <div class="oper">
                           <a
@@ -487,11 +487,11 @@
                         <span class="no" :class="i < 3 ? 'no-top' : ''">{{
                           ++i
                         }}</span>
-                        <a
-                          :href="'/song?id=' + item.id"
+                        <router-link
+                          :to="'/song?id=' + item.id"
                           class="nm s-fc0 f-thide"
                           :title="item.name"
-                          >{{ item.name }}</a
+                          >{{ item.name }}</router-link
                         >
                         <div class="oper">
                           <a
@@ -838,6 +838,7 @@ export default {
         limit: 8,
       });
       var TopPicks = result.result;
+      
       for (let i = 0; i < TopPicks.length; i++) {
         let playCount = TopPicks[i].playCount;
         if (playCount.toString().length > 5) {

@@ -37,6 +37,7 @@
         @handel-screen="handelScreen"
       />
     </div>
+    <Top></Top>
   </div>
 </template>
 
@@ -45,10 +46,12 @@ import api from '@/api/index.js';
 
 import SingerList from '@/components/SingerList';
 import ResidentSingerData from '../assets/data/residentSinger.json'
+import Top from '../components/Top.vue';
 
 export default {
   components: {
     SingerList,
+    Top
   },
   data() {
     return {

@@ -39,7 +39,9 @@
               >
                 <em>朋友</em>
                 <sub class="cor">&nbsp;</sub
-                ><i class="dot j-t"></i></router-link
+                >
+                <!-- <i class="dot j-t"></i> -->
+                </router-link
             ></span>
           </li>
           <li>
@@ -70,13 +72,15 @@
             ><sup class="hot">&nbsp;</sup>
           </li>
         </ul>
+        <login v-if="loginWind"  @closeWind="closeWind"></login>
         <div class="m-tophead f-pr j-tflag">
           <a
-            v-if="!islogin"
+            v-if="!$store.state.isLogin"
             hidefocus="true"
             href="#"
             class="link s-fc3"
             data-action="login"
+            @click="showWind"
             >登录</a
           >
           <div v-else class="head f-fl f-pr">
@@ -85,7 +89,7 @@
             <i class="m-topmsg f-pa f-hide j-uflag"></i>
           </div>
           <a to="#" class="name f-thide f-fl f-tdn f-hide">俊九岁哟</a>
-          <div  v-show="islogin" class="m-tlist m-tlist-lged j-uflag">
+          <div v-show="$store.state.isLogin" class="m-tlist m-tlist-lged j-uflag">
             <ul class="f-cb lb mg">
               <li>
                 <a to="#" class="item-1">
@@ -128,7 +132,7 @@
               </li>
             </ul>
             <ul class="f-cb lt">
-              <li>
+              <li @click="loginout">
                 <a to="#" class="itm-3">
                   <i class="icn icn-ex"></i>
                   <em>退出</em>
@@ -151,12 +155,13 @@
                 style="opacity: 1"
                 @blur="blurSearch"
                 @focus="focusSearch"
+                @keydown.enter="goSearch"
               />
               <label
                 for="srch"
                 class="ph j-flag"
                 id="auto-id-Xoo7XSGWsPCUHdt2"
-                :class="{ isDisplay: isDisplay }"
+                v-show="isDisplay"
               >
                 音乐/视频/电台/用户
               </label>
@@ -164,7 +169,11 @@
           </div>
           <!-- <div class="j-showoff u-showoff f-hide"><p>现在支持搜索MV啦~</p></div> -->
           <!-- <span class="j-flag" style="display:none;" id="auto-id-epybdhJPw3JZs4Rb">&nbsp;</span> -->
-          <div class="u-lstlay" :class="{ isDisplayU: isDisplayU }">
+          <div
+            class="u-lstlay"
+            :class="{ isDisplayU: isDisplayU }"
+            style="display: none !important"
+          >
             <div class="m-schlist">
               <p class="note">
                 <a to="" class="s-fc3">搜“{{ value }}” 相关用户</a> >
@@ -246,24 +255,40 @@
 </template>
 
 <script>
+import Login from '../components/Login.vue';
+import api from "../api/index";
+
 export default {
   name: "NavBar",
+  components:{
+    Login,
+  },
   data() {
     return {
       active: 1,
-      isDisplay: false,
+      isDisplay: true,
       isDisplayU: false,
+      labelvalue: "",
       value: "",
-
+      // 导航栏默认显示的导航
       activeIndex: "1",
       activeIndex2: "1",
-
+      // 是否登录
       islogin: false,
+      // 登录的窗口
+      loginWind:false,
     };
   },
   methods: {
+    // 显示登录的窗口
+    showWind(){
+      this.loginWind = true
+    },
+    // 关闭登录的窗口
+    closeWind(data){
+      this.loginWind = data
+    },
     changeNav(n) {
-      console.log("wasd");
       this.active = n;
     },
     cliLabel() {
@@ -272,16 +297,40 @@ export default {
     blurSearch(e) {
       var value = e.target.value;
       if (value == "") {
-        this.isDisplay = !this.isDisplay;
+        this.isDisplay = true;
       } else {
       }
     },
     focusSearch(e) {
-      this.isDisplay = !this.isDisplay;
+      this.isDisplay = false;
     },
     // handleSelect(key, keyPath) {
     //   console.log(key, keyPath);
     // },
+    // 跳转到搜索页面
+    goSearch() {
+      this.$router.push({ path: "/search", query: { s: this.value } });
+      // this.search();
+    },
+    sb(){
+      console.log("mfsdnj");
+    },
+    // 登出函数
+    loginout() {
+      // 移除登录状态和用户信息
+      localStorage.removeItem("Login");
+      localStorage.removeItem("UserInfo");
+      this.$store.commit("changeIsLogin", false);
+      this.loginWind =false
+      this.$router.go(0);
+      this.getLoginOut();
+      this.sb()
+      // console.log("Navbar登出函数");
+    },
+    async getLoginOut() {
+      const result = await api.getLoginOut();
+      // console.log("Navbar登出异步函数");
+    },
   },
   watch: {
     value(val, oldVal) {
@@ -296,6 +345,9 @@ export default {
     },
   },
   computed: {},
+  mounted(){
+    console.log(localStorage.getItem("UserInfo"));
+  }
 };
 </script>
 
@@ -483,12 +535,6 @@ a:hover {
     li.fst span {
       background: none;
     }
-    // a:hover,
-    // a.z-slt {
-    //   background: #000;
-    //   text-decoration: none;
-    //   color: #fff;
-    // }
     a:hover,
     a.router-link-active {
       background: #000;
@@ -652,6 +698,9 @@ a:hover {
     }
     .m-tlist-lged .arr {
       margin-left: -8px;
+    }
+    a:hover {
+      text-decoration: underline;
     }
   }
   .m-srch {

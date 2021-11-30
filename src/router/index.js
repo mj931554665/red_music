@@ -45,11 +45,23 @@ const routes = [
   {
     path:'/song',
     component:()=>import('../views/Song.vue'),
+  },
+  {
+    path:'/search',
+    component:()=>import('../views/Search.vue'),
   }
 ]
 
 const router = new VueRouter({
   routes
 })
+// router.beforeEach((to, from, next) => {
+//   if(to.fullPath == '/myMusic'){
+//     //未登录的情况
+//     next()
+//   }else{
+//     next()
+//   }
+// })
 
 export default router

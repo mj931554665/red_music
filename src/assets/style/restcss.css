@@ -249,7 +249,8 @@ a:hover {
 	color: #333;
 }
 
-html, body {
+html,
+body {
 	width: 100%;
 	height: 100%;
 	border: 0;
@@ -293,91 +294,108 @@ button {
 
 .s-fc3,
 a.s-fc3:hover {
-  color: #666;
+	color: #666;
 }
+
 .u-icn-26,
 .u-icn-27,
 .u-icn-28,
 .u-icn-29 {
-  width: 14px;
-  height: 15px;
-  background-position: -35px -300px;
+	width: 14px;
+	height: 15px;
+	background-position: -35px -300px;
 }
+
 .s-fc7,
 a.s-fc7:hover {
-  color: #0c73c2;
+	color: #0c73c2;
 }
+
 .f-thide {
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  word-wrap: normal;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	word-wrap: normal;
 }
+
 a:hover {
-  text-decoration: none;
+	text-decoration: none;
 }
+
 .f-cb:after {
-  clear: both;
-  content: ".";
-  display: block;
-  height: 0;
-  visibility: hidden;
+	clear: both;
+	content: ".";
+	display: block;
+	height: 0;
+	visibility: hidden;
 }
+
 .f-thide {
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  word-wrap: normal;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	word-wrap: normal;
 }
+
 .f-hide,
 .js-hide {
-  display: none !important;
+	display: none !important;
 }
+
 .m-tlist .m-topmsg {
-  top: 7px;
-  left: 110px;
+	top: 7px;
+	left: 110px;
 }
+
 .m-topmsg {
-  display: inline-block;
-  min-width: 17px;
-  height: 17px;
-  padding: 0 4px;
-  box-sizing: border-box;
-  background: #c20c0c;
-  border-radius: 18px;
-  border: 1px solid #242424;
-  line-height: 16px;
-  font-size: 12px;
-  white-space: nowrap;
-  color: #fff;
-  text-align: center;
+	display: inline-block;
+	min-width: 17px;
+	height: 17px;
+	padding: 0 4px;
+	box-sizing: border-box;
+	background: #c20c0c;
+	border-radius: 18px;
+	border: 1px solid #242424;
+	line-height: 16px;
+	font-size: 12px;
+	white-space: nowrap;
+	color: #fff;
+	text-align: center;
 }
+
 .f-cb:after {
-  clear: both;
-  content: ".";
-  display: block;
-  height: 0;
-  visibility: hidden;
+	clear: both;
+	content: ".";
+	display: block;
+	height: 0;
+	visibility: hidden;
 }
+
 .f-pr {
-  position: relative;
-  zoom: 1;
+	position: relative;
+	zoom: 1;
 }
-.el-carousel__indicators{
+
+.el-carousel__indicators {
 	left: 42%;
 }
-.el-carousel__arrow--left{
+
+.el-carousel__arrow--left {
 	left: 200px;
 }
-.el-carousel__arrow--right{
+
+.el-carousel__arrow--right {
 	right: 200px;
 }
-#album-roller .el-carousel{
+
+#album-roller .el-carousel {
 	padding: 0 16px;
 }
-#album-roller .el-carousel__indicators{
-  display: none;
+
+#album-roller .el-carousel__indicators {
+	display: none;
 }
+
 /* #album-roller .el-carousel--horizontal{
 	overflow: inherit;
 } */
@@ -385,10 +403,12 @@ a:hover {
 	left: -16px;
 	top: 45%;
 }
-#album-roller .el-carousel__arrow--right{
+
+#album-roller .el-carousel__arrow--right {
 	right: -18px;
 	top: 45%;
 }
+
 #album-roller .el-carousel__arrow {
 	width: 24px;
 	height: 198px;
@@ -396,6 +416,170 @@ a:hover {
 	background-color: #f5f5f5;
 	border-radius: 0;
 }
-#album-roller .el-carousel__arrow:hover{
+
+#album-roller .el-carousel__arrow:hover {
 	color: #656565;
+}
+
+.slider .el-slider__runway {
+	margin: 0px 0;
+}
+
+.slider .el-slider__runway {
+	background: url("../images/statbar.png") no-repeat;
+	height: 9px;
+	background-position: right 0;
+}
+
+.slider .el-slider__bar {
+	background: url("../images/statbar.png") no-repeat;
+	height: 9px;
+	background-position: left -66px;
+}
+
+.slider .el-slider__button,
+.slider .el-slider__button-wrapper,
+.m-vol .el-slider__button-wrapper {
+	position: absolute;
+	top: -7px;
+	right: -13px;
+	width: 22px;
+	height: 24px;
+	margin-left: 0px;
+	background: url("../images/iconall.png") no-repeat;
+	background-position: 0 -250px;
+	border: none;
+}
+
+.slider .el-slider__button :hover,
+.slider .el-slider__button-wrapper:hover {
+	background-position: 0 -280px;
+}
+
+.slider .el-slider__button,
+.m-vol .el-slider__button {
+	display: none !important;
+}
+
+.m-vol .el-slider__bar {
+	background: url("../images/playbar.png") no-repeat;
+	position: absolute;
+	width: 4px;
+	top: auto;
+	bottom: 4px;
+	left: 0;
+	background-position: -40px bottom;
+	overflow: hidden;
+}
+
+.m-vol .el-slider__runway {
+	padding: 0;
+	position: absolute;
+	top: 11px;
+	left: 14px;
+	width: 4px;
+	height: 93px;
+	background: none;
+	margin: 0 !important;
+}
+
+.m-vol .el-slider__button-wrapper {
+	position: absolute;
+	top: 0;
+	left: -7px !important;
+	display: block;
+	width: 18px;
+	height: 20px;
+	background-position: -40px -250px;
+	_background-position: 0 0;
+	cursor: pointer;
+	top: 76px;
+}
+
+.m-vol .el-slider__button-wrapper:hover {
+	background-position: -40px -280px;
+}
+
+.g-bd,
+.g-bd1,
+.g-bd2,
+.g-bd3,
+.g-bd4,
+.g-bd5,
+.g-bd6,
+.g-bd7 {
+	width: 980px;
+	min-height: 700px;
+	_height: 700px;
+	margin: 0 auto;
+	background-color: #fff;
+	border: 1px solid #d3d3d3;
+	border-width: 0 1px;
+}
+
+.login .el-input__inner {
+	width: 220px;
+	height: 32px;
+	border-radius: 0;
+	border: 1px solid #cdcdcd;
+	z-index: 10;
+}
+
+.login .login_box .login_form div:nth-child(2) .el-input__inner {
+	position: absolute;
+	top: -57px;
+	left: 44px;
+	width: 176px;
+}
+
+.login .login_box .login_form div:nth-child(2) .el-form-item__error {
+	top: -57px;
+	left: 0;
+}
+
+.login .login_box .login_form div:nth-child(3) .el-form-item__content {
+	top: -55px;
+}
+
+.login .login_box .login_form .btns {
+	position: relative;
+	top: -36px;
+}
+
+.login .el-button,
+.login .el-button span {
+	background: url("../images/button2.png") no-repeat 0 9999px;
+	display: inline-block;
+	height: 31px;
+	line-height: 31px;
+	overflow: hidden;
+	vertical-align: top;
+	text-align: center;
+	cursor: pointer;
+}
+
+.login .el-button {
+	padding: 0 5px 0 0;
+	white-space: nowrap;
+	text-decoration: none;
+	color: #fff;
+	background-position: right -428px;
+	width: 215px;
+	border: none;
+}
+
+.login .el-button span {
+	padding: 0 15px 0 20px;
+	pointer-events: none;
+	color: #fff;
+	background-position: 0 -387px;
+	width: 180px;
+}
+.login .el-button:hover {
+	color: #fff;
+	background-position: right -510px;
+}
+.login .el-button:hover span {
+	color: #fff;
+	background-position: 0 -469px;
 }
